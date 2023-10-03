@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-1.0.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:cTIiaYYbbA0LFtovfton@containers-us-west-198.railway.app:7890/railway"
+}
+
+model Course {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  name      String
+  image   String
+}
